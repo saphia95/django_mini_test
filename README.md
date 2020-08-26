@@ -6,6 +6,7 @@ It works well but is not very user friendly.
 
 # 2. Expected changes
 * When adding a new product, the user should not have to enter a product name
+* When adding a new product, the user should only be able to enter a 13 digits reference in the Gtin field
 * When adding a new product, the site should send a request to OpenFoodFact to gather the product name and an image url. The api documentation can be found here: https://world.openfoodfacts.org/data
 * On the home page, in the list of products, the photo from OpenFoodFact, along with the name, should be displayed
 
