@@ -16,6 +16,7 @@ It works well but is not very user friendly.
 
 # 4. Install
 To install and run the current project, follow those steps.
+
 1. Install postgreSQL if you don't have it
 2. Create a virtual environment at the root of the project
 3. Open the virtual env
