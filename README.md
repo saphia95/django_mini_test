@@ -1,35 +1,25 @@
-# CB+ backend intern developer test   
+# CB+ backend mini test 
 # 1. Summary
-You will be tasked with creating a minimal inventory app using Django.   
-The information stored by the app is a list of references and their corresponding expiry date. In a    
-shop an employee can for any reference, enter the current shortest expiry date present on the   
-shelves.   
-Example: a store sells a yogurt. On display, there are yogurts expiring on the 10 th of October and   
-others expiring on the 13 th of October. The shortest expiry date is 10 th of October. So the app will   
-give the information that the yogurts will expire on the 10 th of October.   
-# 2. Requirements   
-Create a Django application backed by a PostgreSQL database, which displays the current list of   
-expiry dates for the products in the shop.   
-The following features are expected:   
-• Enter a new expiry date for a GTIN (the digits below the barcode)   
-• Display a list of all current Expiry dates in the shop   
-• When entering a GTIN already used, the app should detect the already existing reference and
-update its expiry date.    
-    
-Optional features could be: sorting and filtering the list, a responsive design...    
-You are responsible of designing the model and also the general design of the interface. It is required   
-that the user interface is styled with CSS.   
-# 3. Expected Result
-1. Estimate the time needed to develop the app. Split this estimate in small tasks as needed.
-Send us this estimate as soon as possible.    
-2. Deploy the Django app on a serveur of your choice. Services like Heroku provide free hosting.    
-3. Send us:   
-a. The URL of the app   
-b. A link to your remote git repository (needs to be public so we can clone it)   
-c. An explanation of the process to build the app locally    
-d. A short text explaining your technical decisions and possible areas of improvement.    
-# 4.Evaluation criteria
-1. Understanding of task to be performed
-2. Respect of the deadline (2 days maximum)
-3. Knowledge of the Django framework and of html / css
-4. Quality of commits
+You will be tasked with updating the project contained in this repo to add a few features and update current ones.
+The website contained in this project is a small inventory in which users can add products and their expiry dates to track them.
+It works well but is not very user friendly. 
+
+# 2. Expected changes
+* When adding a new product, the user should not have to enter a product name
+* When adding a new product, the site should send a request to OpenFoodFact to gather the product name and an image url. The api documentation can be found here: https://world.openfoodfacts.org/data
+* On the home page, in the list of products, the photo from OpenFoodFact, along with the name, should be displayed
+
+# 3. Expected results
+1. Clone the project in this repo
+2. Make the necesary changes
+3. Submit the link to a public repo whith your updated code. 
+
+# 4. Install
+To install and run the current project, follow those steps.
+1. Install postgreSQL if you don't have it
+2. Create a virtual environment at the root of the project
+3. Open the virtual env
+4. Inside the virtual env, install the dependencies described in the pipfile
+5. Run `python manage.py migrate` to create the database
+6. Run `python manage.py runserver` to start the server
+7. The website should be available at `http://127.0.0.1:8000/inventory/`
