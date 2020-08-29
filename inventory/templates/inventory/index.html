@@ -59,6 +59,7 @@
     <BR>
     {% if latest_inventory_list %}
         {% for item in latest_inventory_list %}
+            <img src={{item.image_url}}>
             {% if item.is_outdated %}
             <a href="{% url 'detail' item.id %}">{{ item.name }} is outdated. <U><b>{{ item.expiry_date }}</b></U></a>
             {% else %}
